@@ -27,7 +27,7 @@ const elements = images.map((option) => {
 
   return image;
 });
-// console.log(elements);
+console.log(elements);
 gallery.append(...elements);
 
 // const option = images[0];
