@@ -13,37 +13,9 @@ const images = [
   },
 ];
 const gallery = document.querySelector(".gallery");
-
-const item = document.createElement("li");
-item.classList.add("item");
-
-const elements = images.map((option) => {
-  const image = document.createElement("img");
-  image.src = option.url;
-  image.alt = option.alt;
-  image.classList = ".image";
-  image.width = 300;
-  image.height = 300;
-
-  return image;
+const newElements = images.map((element) => {
+  gallery.insertAdjacentHTML(
+    "beforeend",
+    `<li class="gallery-item"><img class="gallery-img" src="${element.url}"alt="${element.alt}"     width= 400px;></li>`
+  );
 });
-console.log(elements);
-gallery.append(...elements);
-
-// const option = images[0];
-
-// const image = document.createElement("img");
-// image.src = option.url;
-// image.alt = option.alt;
-// console.log(image);
-// const gallery = document.querySelector(".gallery");
-
-// const item = document.createElement("li");
-// item.classList.add("item");
-
-// item.insertAdjacentHTML("beforeend", '<img src="" alt=""></img>');
-// console.log(item);
-// const image = document.createElement("img");
-// // image.src = images.url;
-// // image.alt = images.alt;
-// console.log(image);
