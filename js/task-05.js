@@ -6,4 +6,8 @@ console.log(displayString);
 
 inputLine.addEventListener("input", (event) => {
   displayString.textContent = event.currentTarget.value;
+
+  if (event.currentTarget.value === "") {
+    displayString.textContent = `Anonymous`;
+  }
 });
