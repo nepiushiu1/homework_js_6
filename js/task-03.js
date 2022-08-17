@@ -13,9 +13,12 @@ const images = [
   },
 ];
 const gallery = document.querySelector(".gallery");
-const newElements = images.map((element) => {
-  gallery.insertAdjacentHTML(
-    "beforeend",
-    `<li class="gallery-item"><img class="gallery-img" src="${element.url}"alt="${element.alt}"     width= 400px;></li>`
-  );
-});
+const newElements = images
+  .map(
+    (element) =>
+      `<li class="gallery-item"><img class="gallery-img" src="${element.url}"alt="${element.alt}"     width= 400px;></li>`
+  )
+  .join("");
+
+console.log(newElements);
+gallery.insertAdjacentHTML("beforeend", newElements);

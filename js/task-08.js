@@ -11,10 +11,10 @@ function onFormSubmit(event) {
     email,
     password,
   };
-
   if (email === "" || password === "") {
     alert(`Please fill in all the fields!`);
+  } else if (email !== "" && password !== "") {
+    console.log(formData);
+    form.reset();
   }
-  console.log(formData);
-  form.reset();
 }
